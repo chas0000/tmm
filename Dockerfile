@@ -58,5 +58,5 @@ RUN chmod +x /root/start.sh
 EXPOSE 6080  
   
 # 设置容器启动时执行的命令  
-ENTRYPOINT ["bash"]
+ENTRYPOINT ["fluxbox"]
 CMD ["-c", "/root/start.sh"]
