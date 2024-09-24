@@ -9,7 +9,7 @@ ENV LC_ALL zh_CN.UTF-8
 # 安装必要的软件包  
 RUN apt-get update && apt-get install -y locales \  
 && locale-gen zh_CN.UTF-8 
-RUN update-locale LANG=zh_CN.UTF-8
+
 RUN apt-get update && apt-get install -y \  
     xserver-xorg-video-dummy \  
     xinit \  
