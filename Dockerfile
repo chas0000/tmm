@@ -4,9 +4,9 @@ FROM debian:latest
 RUN apt-get update && apt-get install -y locales \  
 && locale-gen zh_CN.UTF-8 
 
-ENV LANG zh_CN.UTF-8  
-ENV LANGUAGE zh_CN:zh  
-ENV LC_ALL zh_CN.UTF-8
+ENV LANG=zh_CN.UTF-8  
+ENV LANGUAGE=zh_CN:zh  
+ENV LC_ALL=zh_CN.UTF-8
 
 RUN apt-get update && apt-get install -y \  
     xserver-xorg-video-dummy \  
