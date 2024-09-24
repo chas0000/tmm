@@ -51,12 +51,12 @@ RUN chmod +x /root/.vnc/xstartup
 ENV DISPLAY=:1
 
 # 编写启动脚本  
-COPY start.sh /usr/local/bin/start.sh  
-RUN chmod +x /usr/local/bin/start.sh  
+COPY start.sh /root/start.sh  
+RUN chmod +x /root/start.sh  
   
 
 EXPOSE 6080  
   
 # 设置容器启动时执行的命令  
 ENTRYPOINT ["bash"]
-CMD ["-c", "exec bash"]
+CMD ["-c", "/root/start.sh"]
