@@ -59,3 +59,4 @@ EXPOSE 6080
   
 # 设置容器启动时执行的命令  
 ENTRYPOINT ["bash"]
+CMD ["-c", "exec bash"]
