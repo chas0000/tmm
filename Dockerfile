@@ -38,6 +38,11 @@ RUN rm /tmp/novnc.zip
 RUN mkdir -p /root/.vnc && \  
     echo "123456" | vncpasswd -f > /root/.vnc/passwd && \  
     chmod 600 /root/.vnc/passwd 
+COPY vncserver.xstartup /root/.vnc/  
+
+RUN chmod +x /root/.vnc/vncserver.xstartup 
+
+ENV DISPLAY=:1
 
 # 编写启动脚本  
 COPY start.sh /usr/local/bin/start.sh  
