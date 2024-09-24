@@ -5,10 +5,10 @@ FROM tinymediamanager/tinymediamanager
 RUN apt-get update && apt-get install -y \
     fcitx5 \
     fcitx5-rime 
-Run apt install -y fluxbox
-RUN apt autoremove tint2 openbox || true 
-Run rm -f /usr/share/xsessions/openbox.desktop
-COPY ./fluxbox.desktop /usr/share/xsessions
+#Run apt install -y fluxbox
+#RUN apt autoremove tint2 openbox || true 
+#Run rm -f /usr/share/xsessions/openbox.desktop
+#COPY ./fluxbox.desktop /usr/share/xsessions
 
 COPY ./startup.sh /usr/local/bin/ 
 RUN chmod +x /usr/local/bin/startup.sh
