@@ -25,7 +25,7 @@ RUN wget https://release.tinymediamanager.org/v5/dist/tinyMediaManager-5.0.11-li
 RUN ls /tmp/tmm.tar.xz
 
 RUN xz -d /tmp/tmm.tar.xz \  
-    && tar -xf /tmp/tmm.tar -C /opt \  
+    && tar -xf /tmp/tmm.tar -C /opt
    
 # 安装noVNC  
 RUN mkdir -p /opt/novnc
