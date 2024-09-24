@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
     fcitx5-rime \
     mediainfo
 RUN wget https://release.tinymediamanager.org/v5/dist/tinyMediaManager-5.0.11-linux-amd64.tar.xz -O /tmp/tmm.tar.xz \
-    && tar /tmp/tmm.tar.xz -C /opt
+    && tar -xf /tmp/tmm.tar.xz -C /opt
 # 安装noVNC  
 RUN mkdir -p /usr/share/novnc \  
     && wget https://github.com/novnc/noVNC/archive/refs/heads/master.zip -O /tmp/novnc.zip \  
