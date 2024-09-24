@@ -1,0 +1,6 @@
+[Desktop Entry]  
+Name=Fluxbox  
+Comment=Lightweight and easy-to-use window manager  
+Exec=fluxbox  
+TryExec=fluxbox  
+Type=XSession
