@@ -44,14 +44,14 @@ RUN rm /tmp/novnc.zip
 RUN mkdir -p /root/.vnc && \  
     echo "123456" | vncpasswd -f > /root/.vnc/passwd && \  
     chmod 600 /root/.vnc/passwd 
-COPY xstartup /root/.vnc/  
+COPY ./xstartup /root/.vnc/  
 
 RUN chmod +x /root/.vnc/xstartup 
 
 ENV DISPLAY=:1
 
 # 编写启动脚本  
-COPY start.sh /root/start.sh  
+COPY ./start.sh /root/start.sh  
 RUN chmod +x /root/start.sh  
   
 
