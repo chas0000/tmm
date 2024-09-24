@@ -40,7 +40,7 @@ RUN mkdir -p /root/.vnc && \
     chmod 600 /root/.vnc/passwd 
 COPY xstartup /root/.vnc/  
 
-RUN chmod +x /root/.vnc/vncserver.xstartup 
+RUN chmod +x /root/.vnc/xstartup 
 
 ENV DISPLAY=:1
 
