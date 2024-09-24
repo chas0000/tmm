@@ -6,7 +6,9 @@ RUN apt-get update && apt-get install -y \
     fcitx5 \
     fcitx5-rime 
 RUN apt auto-remove tint2 openbox
+
 Run apt install -y fluxbox
+
 COPY ./startup.sh /usr/local/bin/ 
 RUN chmod +x /usr/local/bin/startup.sh
 # 设置容器启动时执行的命令  
