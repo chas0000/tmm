@@ -24,11 +24,11 @@ RUN apt-get update && apt-get install -y \
 RUN wget https://release.tinymediamanager.org/v5/dist/tinyMediaManager-5.0.11-linux-amd64.tar.xz -O /tmp/tmm.tar.xz \
     && tar -xf /tmp/tmm.tar.xz -C /opt
 # 安装noVNC  
-RUN mkdir -p /usr/share/novnc \  
+RUN mkdir -p /opt/novnc \  
     && wget https://github.com/novnc/noVNC/archive/refs/heads/master.zip -O /tmp/novnc.zip \  
-    && unzip /tmp/novnc.zip -d /usr/share/novnc \  
-    && mv /usr/share/novnc/noVNC-master/* /opt/novnc/ \  
-    && rm -rf /usr/share/novnc/noVNC-master \  
+    && unzip /tmp/novnc.zip -d /opt/novnc \  
+    && mv /opt/noVNC-master/* /opt/novnc/ \  
+    && rm -rf /opt/novnc/noVNC-master \  
     && rm /tmp/novnc.zip  
     
 # 设置VNC密码  
