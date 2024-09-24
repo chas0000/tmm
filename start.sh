@@ -30,7 +30,7 @@ WEBSOCKIFY_PID=$!
 # fcitx5 &  
   
 # 启动 tinyMediaManager（确保它可以在没有图形界面的环境中运行，或者在一个适当的容器中）  
-/opt/tinyMediaManager/tinyMediaManager &  
+/opt/tinyMediaManager/tinyMediaManager 
 TINYMM_PID=$!  
 echo "完成启动tmm"  
 # 等待所有后台进程结束（这里只是示例，通常你不会这样做，除非你确实需要）  
