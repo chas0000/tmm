@@ -15,11 +15,11 @@ VNC_PID=$!
   
 # 等待 VNC 服务器启动（这里只是简单的等待，更好的方法是检查端口）  
 sleep 5  
-  
+echo "完成启动VNC"
 # 启动 Fluxbox（这里假设它已经配置好了）  
 fluxbox &  
 FLUXBOX_PID=$!  
-  
+echo "完成启动Fluxbox"  
 # 启动 NoVNC WebSocket 代理  
 /opt/novnc/utils/websockify --web /opt/novnc --no-tls 6080 localhost:5901 &  
 WEBSOCKIFY_PID=$!  
@@ -32,6 +32,6 @@ WEBSOCKIFY_PID=$!
 # 启动 tinyMediaManager（确保它可以在没有图形界面的环境中运行，或者在一个适当的容器中）  
 /opt/tinyMediaManager/tinyMediaManager &  
 TINYMM_PID=$!  
-  
+echo "完成启动tmm"  
 # 等待所有后台进程结束（这里只是示例，通常你不会这样做，除非你确实需要）  
 # wait $XVFB_PID $VNC_PID $FLUXBOX_PID $WEBSOCKIFY_PID $TINYMM_PID
