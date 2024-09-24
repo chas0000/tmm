@@ -105,3 +105,9 @@ else
 fi
 
 exec /usr/sbin/gosu "${USER_ID}":"${GROUP_ID}" supervisord
+export INPUT_METHOD=fcitx5
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS=@im=fcitx5
+im-config -n fcitx5  
+fcitx5 &
