@@ -26,10 +26,10 @@ RUN wget https://release.tinymediamanager.org/v5/dist/tinyMediaManager-5.0.11-li
 # 安装noVNC  
 RUN mkdir -p /opt/novnc \  
     && wget https://github.com/novnc/noVNC/archive/refs/heads/master.zip -O /tmp/novnc.zip \  
-    && unzip /tmp/novnc.zip -d /opt/novnc \  
-    && mv /opt/noVNC-master/* /opt/novnc/ \  
-    && rm -rf /opt/novnc/noVNC-master \  
-    && rm /tmp/novnc.zip  
+RUN unzip /tmp/novnc.zip -d /opt/novnc \  
+RUN mv /opt/noVNC-master/* /opt/novnc/ \  
+RUN rm -rf /opt/novnc/noVNC-master \  
+RUN rm /tmp/novnc.zip  
     
 # 设置VNC密码  
 RUN mkdir -p /root/.vnc \  
