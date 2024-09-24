@@ -4,7 +4,8 @@ FROM tinymediamanager/tinymediamanager
 
 RUN apt-get update && apt-get install -y \
     fcitx5 \
-    fcitx5-rime \     
+    fcitx5-rime 
+    
 COPY ./xstartup /root/.vnc/  
 RUN chmod +x /root/.vnc/xstartup 
 # 设置容器启动时执行的命令  
