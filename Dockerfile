@@ -14,4 +14,4 @@ COPY ./startup.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/startup.sh
 # 设置容器启动时执行的命令  
 ENTRYPOINT ["/usr/local/bin/startup.sh"]
-CMD ["/app/tinyMediaManager -Dtmm.contentfolder=/data -Dfile.encoding=UTF-8 -Dsun.awt.im.inputMethodLocale=zh_CN"]
+CMD ["/app/tinyMediaManager -Dtmm.contentfolder=/data  -Dsun.awt.im.inputMethodLocale=zh_CN"]
