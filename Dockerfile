@@ -22,7 +22,7 @@ RUN wget https://release.tinymediamanager.org/v5/dist/tinyMediaManager-5.0.11-li
 
 RUN xz -d /tmp/tmm.tar.xz && tar -xf /tmp/tmm.tar -C /opt
 
-RUN rm /tmp/tmm.tar.xz
+RUN rm /tmp/tmm.tar.xz && rm /tmp/tmm.tar
 # 安装noVNC  
 RUN mkdir -p /opt/novnc \  
     && wget https://github.com/novnc/noVNC/archive/refs/heads/master.zip -O /tmp/novnc.zip   
