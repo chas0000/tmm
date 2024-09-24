@@ -28,8 +28,10 @@ RUN xz -d /tmp/tmm.tar.xz \
     && tar -xf /tmp/tmm.tar -C /opt \  
    
 # 安装noVNC  
-RUN mkdir -p /opt/novnc \  
-    && wget https://github.com/novnc/noVNC/archive/refs/heads/master.zip -O /tmp/novnc.zip   
+RUN mkdir -p /opt/novnc
+
+RUN wget https://github.com/novnc/noVNC/archive/refs/heads/master.zip -O /tmp/novnc.zip 
+RUN ls /tmp/novnc.zip
 RUN unzip /tmp/novnc.zip -d /opt
 
 RUN mv /opt/noVNC-master/* /opt/novnc   
