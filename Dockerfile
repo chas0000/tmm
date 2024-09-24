@@ -58,4 +58,4 @@ RUN chmod +x /usr/local/bin/start.sh
 EXPOSE 6080  
   
 # 设置容器启动时执行的命令  
-CMD ["/usr/local/bin/start.sh"]
+CMD ["bash"]
