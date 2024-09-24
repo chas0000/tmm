@@ -35,9 +35,9 @@ RUN rm -rf /opt/novnc/noVNC-master
 RUN rm /tmp/novnc.zip  
     
 # 设置VNC密码  
-RUN mkdir -p /root/.vnc \  
-    && x11vnc -storepasswd 123456 /root/.vnc/passwd \  
-    && chmod 600 /root/.vnc/passwd  
+RUN mkdir -p /root/.vnc && \  
+    echo "123456" | vncpasswd -f > /root/.vnc/passwd && \  
+    chmod 600 /root/.vnc/passwd 
 
 # 编写启动脚本  
 COPY start.sh /usr/local/bin/start.sh  
