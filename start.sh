@@ -1,5 +1,5 @@
 #!/bin/bash  
-  
+echo "尝试启动"   
 # 启动 Xvfb  
 Xvfb :1 -screen 0 1024x768x16 &  
 XVFB_PID=$!  
@@ -8,7 +8,7 @@ XVFB_PID=$!
 while ! pgrep -x Xvfb > /dev/null; do  
     sleep 1  
 done  
-  
+echo "完成启动Xvfb"  
 # 启动 VNC 服务器  
 vncserver :1 -geometry 1024x768 -depth 16 -passwordfile /root/.vnc/passwd &  
 VNC_PID=$!  
